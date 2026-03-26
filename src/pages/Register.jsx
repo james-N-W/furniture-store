@@ -27,7 +27,11 @@ export default function Register() {
       return setError("Passwords do not match.");
     }
     if (password.length < 6) {
-      return setError("Password must be at least 6 characters.");
+      return setError("Password must meet the following requirements:\n" +
+                      "- At least 6 characters\n" +
+                      "- Include a number\n" +
+                      "- Include uppercase and lowercase letters\n" +
+                      "- Include a special character");
     }
 
     setLoading(true);
@@ -53,7 +57,11 @@ export default function Register() {
       } else if (err.code === "auth/invalid-email") {
         setError("Please enter a valid email address.");
       } else {
-        setError("Something went wrong. Please try again.");
+        setError("Password must meet the following requirements:\n" +
+                  "- At least 6 characters\n" +
+                  "- Include a number\n" +
+                  "- Include uppercase and lowercase letters\n" +
+                  "- Include a special character");
       }
     } finally {
       setLoading(false);
