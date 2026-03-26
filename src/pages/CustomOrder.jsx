@@ -45,7 +45,7 @@ export default function CustomOrder() {
                                                                                                     // Replace YOUR_WHATSAPP_NUMBER with your number
                                                                                                         // Format: country code + number, no + sign, no spaces
                                                                                                             // e.g. South Africa: 27821234567
-                                                                                                                window.open(`https://wa.me/+254721937751?text=${message}`, "_blank");
+                                                                                                                window.open(`https://wa.me/254790309467?text=${message}`, "_blank");
                                                                                                                     setSubmitted(true);
                                                                                                                       }
 
