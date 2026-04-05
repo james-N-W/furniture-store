@@ -156,7 +156,7 @@ export default function ProductDetail() {
 
       // Open WhatsApp with the message
       // Replace YOUR_WHATSAPP_NUMBER with your real number e.g. 254712345678
-      window.open(`https://wa.me/254790309467?text=${message}`, "_blank");
+      window.open(`https://wa.me/254721937751?text=${message}`, "_blank");
 
       // Redirect to orders page so customer sees their new order
       navigate("/orders");
@@ -367,7 +367,7 @@ export default function ProductDetail() {
                     </svg>
                     {ordering
                       ? "Placing order..."
-                      : `Order via WhatsApp · ${currentPayment.label}`}
+                      : `Order via 254721937751254721937751 · ${currentPayment.label}`}
                   </button>
 
                   {/* Custom design button */}

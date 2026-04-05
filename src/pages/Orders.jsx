@@ -185,7 +185,7 @@ export default function Orders() {
 
               {order.status === "in production" && (
                 <div className="mx-5 mb-5 rounded-xl px-4 py-3 text-xs" style={{ background: "#EEEDFE", color: "#3C3489", border: "0.5px solid #CECBF6" }}>
-                  Your furniture is currently being crafted by hand. We will contact you when it is ready.
+                  Your furniture is currently being crafted. We will contact you when it is ready.
                 </div>
               )}
 
