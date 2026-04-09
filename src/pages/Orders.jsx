@@ -164,6 +164,7 @@ export default function Orders() {
                 </div>
 
               </div>
+            
 
               {order.status === "pending" && (
                 <div className="mx-5 mb-5 rounded-xl px-4 py-3 text-xs" style={{ background: "#FAEEDA", color: "#633806", border: "0.5px solid #FAC775" }}>

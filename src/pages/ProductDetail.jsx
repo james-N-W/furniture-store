@@ -367,7 +367,7 @@ export default function ProductDetail() {
                     </svg>
                     {ordering
                       ? "Placing order..."
-                      : `Order via 254721937751254721937751 · ${currentPayment.label}`}
+                      : `Order via · ${currentPayment.label}`}
                   </button>
 
                   {/* Custom design button */}
