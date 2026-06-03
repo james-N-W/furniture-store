@@ -112,7 +112,7 @@ export default function Home() {
             {/* Eyebrow label */}
             <p className="text-xs tracking-widest uppercase mb-6"
               style={{ color: "var(--wood)" }}>
-              Handcrafted Furniture · Nakuru, Kenya
+              Handcrafted Furniture · All across Kenya
             </p>
 
             {/* Main headline — large serif display font */}
@@ -404,9 +404,7 @@ export default function Home() {
               style={{ color: "var(--charcoal)" }}>
               BROTSIT INTERIORS
             </p>
-            <p className="text-xs" style={{ color: "var(--warm-gray)" }}>
-              Handcrafted furniture · Nakuru, Kenya
-            </p>
+            
           </div>
 
           <div className="flex flex-col gap-1 text-right">
