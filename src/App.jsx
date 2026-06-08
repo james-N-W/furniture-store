@@ -40,9 +40,9 @@ export default function App() {
 
 
           {/* Protected — must be logged in, otherwise redirected to /login */}
-          <Route path="/custom-order" element={
+           {/*<Route path="/custom-order" element={
             <ProtectedRoute><CustomOrder /></ProtectedRoute>
-          } />
+          } />*/}
           <Route path="/orders" element={
             <ProtectedRoute><Orders /></ProtectedRoute>
           } />

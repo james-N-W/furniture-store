@@ -40,23 +40,23 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="font-display text-2xl tracking-tight"
+        <Link to="/" className="font-display text-2xl tracking-tight "
           style={{ color: "var(--charcoal)" }}>
           BROTSIT INTERIORS
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-end gap-21">
           <Link to="/" className="text-sm tracking-wide hover:opacity-60 transition"
             style={{ color: "var(--warm-gray)" }}>
             Collection
           </Link>
-          {user && (
+          {/*{user && (
             <Link to="/custom-order" className="text-sm tracking-wide hover:opacity-60 transition"
               style={{ color: "var(--warm-gray)" }}>
               Custom Order
             </Link>
-          )}
+          )}*/}
           {user && (
             <Link to="/orders" className="text-sm tracking-wide hover:opacity-60 transition"
               style={{ color: "var(--warm-gray)" }}>

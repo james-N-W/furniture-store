@@ -137,12 +137,12 @@ export default function Home() {
                 style={{ background: "var(--charcoal)", color: "var(--cream)" }}>
                 Browse collection
               </a>
-              <Link
+             {/*} <Link
                 to={user ? "/custom-order" : "/register"}
                 className="px-8 py-3 rounded-full text-sm tracking-wide border transition hover:opacity-70"
                 style={{ borderColor: "var(--charcoal)", color: "var(--charcoal)" }}>
                 Request custom piece
-              </Link>
+              </Link>*/}
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ export default function Home() {
 
       {/* ══════════════════════════════
           CUSTOM ORDER CTA SECTION
-      ══════════════════════════════ */}
+      ══════════════════════════════ 
       <section className="border-t" style={{ borderColor: "var(--border)" }}>
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="max-w-2xl">
@@ -391,7 +391,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* ══════════════════════════════
           FOOTER

@@ -139,7 +139,7 @@ export default function Orders() {
                   </p>
                 </div>
 
-                <div>
+                {/*<div>
                   <p className="text-xs mb-1" style={{ color: "var(--warm-gray)" }}>
                     {order.paymentMethod === "mpesa" ? "M-Pesa code" : order.paymentMethod === "bank_transfer" ? "Bank reference" : "Payment"}
                   </p>
@@ -154,7 +154,7 @@ export default function Orders() {
                       {order.paymentMethodLabel || "—"}
                     </p>
                   )}
-                </div>
+                </div>*/}
 
                 <div>
                   <p className="text-xs mb-1" style={{ color: "var(--warm-gray)" }}>Product image</p>
@@ -168,8 +168,8 @@ export default function Orders() {
 
               {order.status === "pending" && (
                 <div className="mx-5 mb-5 rounded-xl px-4 py-3 text-xs" style={{ background: "#FAEEDA", color: "#633806", border: "0.5px solid #FAC775" }}>
-                  {order.paymentMethod === "mpesa"
-                    ? "We received your order. Please wait for our M-Pesa number via WhatsApp, then send payment."
+                  {order.paymentMethod === "mpesa" 
+                    ? "We received your order. Please wait your order is now being processed."
                     : order.paymentMethod === "bank_transfer"
                     ? "We received your order. Please wait for our bank details via WhatsApp, then transfer payment."
                     : "We received your order and are confirming the details with you."}

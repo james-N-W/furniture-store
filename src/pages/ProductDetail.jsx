@@ -25,7 +25,7 @@ import { useAuth } from "../context/AuthContext";
 const PAYMENT_METHODS = [
   {
     id: "mpesa",
-    label: "M-Pesa",
+    label: "",
     desc: "Pay via M-Pesa. We'll send you our number on WhatsApp.",
     autoConfirm: false,
   },
@@ -143,12 +143,12 @@ export default function ProductDetail() {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         })}\n` +
-        `*Payment method:* ${paymentMethod.label}\n` +
+        //`*Payment method:* ${paymentMethod.label}\n` +
         `*Order ID:* ${orderRef.id}\n` +
         `*Email:* ${user.email}\n\n` +
         // Closing line changes based on payment method
         (selectedPayment === "mpesa"
-          ? "Please send me your M-Pesa payment details."
+          ? ""
           : selectedPayment === "bank_transfer"
           ? "Please send me your bank account details."
           : "Please confirm my order and arrange delivery.")
@@ -274,7 +274,7 @@ export default function ProductDetail() {
 
               {user ? (
                 <>
-                  {/* Payment method selector toggle button */}
+                  {/* Payment method selector toggle button *
                   <button
                     onClick={() => setShowPaymentSelector(!showPaymentSelector)}
                     className="w-full flex items-center justify-between px-4 py-3 rounded-xl border text-sm transition"
@@ -287,7 +287,8 @@ export default function ProductDetail() {
                     <span>
                       Payment: <strong>{currentPayment.label}</strong>
                     </span>
-                    {/* Arrow rotates when panel is open */}
+
+                    {/* Arrow rotates when panel is open *
                     <span style={{
                       display: "inline-block",
                       transform: showPaymentSelector ? "rotate(180deg)" : "rotate(0deg)",
@@ -297,7 +298,7 @@ export default function ProductDetail() {
                     </span>
                   </button>
 
-                  {/* Payment method options panel */}
+                  {/* Payment method options panel *
                   {showPaymentSelector && (
                     <div className="rounded-xl overflow-hidden"
                       style={{ border: "0.5px solid var(--border)" }}>
@@ -318,7 +319,7 @@ export default function ProductDetail() {
                               : "none",
                           }}
                         >
-                          {/* Custom radio button indicator */}
+                          {/* Custom radio button indicator *
                           <div className="w-4 h-4 rounded-full border flex-shrink-0 mt-0.5 flex items-center justify-center"
                             style={{
                               borderColor: selectedPayment === method.id
@@ -344,7 +345,7 @@ export default function ProductDetail() {
                       ))}
                     </div>
                   )}
-
+*/}
                   {/* Auto-confirm notice for cash orders */}
                   {currentPayment.autoConfirm && (
                     <div className="px-4 py-3 rounded-xl text-xs"
@@ -357,34 +358,34 @@ export default function ProductDetail() {
                   <button
                     onClick={handleBuyWhatsApp}
                     disabled={ordering}
-                    className="w-full py-3 rounded-xl text-sm font-medium flex items-center justify-center gap-2 transition disabled:opacity-50"
+                    className="w-full   py-6 rounded-4xl text-sm font-bold flex items-center justify-center gap-2 transition disabled:opacity-50"
                     style={{ background: "#25D366", color: "white" }}
                   >
                     {/* WhatsApp SVG icon */}
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.532 5.855L.057 23.882l6.162-1.615A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.716.973.99-3.62-.235-.372A9.818 9.818 0 1112 21.818z"/>
+                     z <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.532 5.855L.057 23.882l6.162-1.615A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.716.973.99-3.62-.235-.372A9.818 9.818 0 1112 21.818z"/>
                     </svg>
                     {ordering
                       ? "Placing order..."
-                      : `Order via · ${currentPayment.label}`}
+                      : ` Purchase now`}
                   </button>
 
-                  {/* Custom design button */}
+                  {/* Custom design button *
                   <button
                     onClick={handleCustomOrder}
                     className="w-full py-3 rounded-xl text-sm font-medium transition hover:opacity-80"
                     style={{ background: "var(--charcoal)", color: "var(--cream)" }}
                   >
                     Request custom design
-                  </button>
+                  </button>*/}
                 </>
               ) : (
                 <>
                   {/* Guest prompt */}
                   <div className="px-4 py-4 rounded-xl text-sm text-center"
                     style={{ background: "var(--wood-light)", color: "var(--charcoal)" }}>
-                    Sign in to purchase or request a custom design
+                    Sign in to purchase
                   </div>
                   <div className="flex gap-3">
                     <Link to="/login"
