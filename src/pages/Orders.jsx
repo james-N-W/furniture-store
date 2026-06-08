@@ -169,7 +169,7 @@ export default function Orders() {
               {order.status === "pending" && (
                 <div className="mx-5 mb-5 rounded-xl px-4 py-3 text-xs" style={{ background: "#FAEEDA", color: "#633806", border: "0.5px solid #FAC775" }}>
                   {order.paymentMethod === "mpesa" 
-                    ? "We received your order. Please wait your order is now being processed."
+                    ? "We received your order. Please wait your order is being confirmed."
                     : order.paymentMethod === "bank_transfer"
                     ? "We received your order. Please wait for our bank details via WhatsApp, then transfer payment."
                     : "We received your order and are confirming the details with you."}
@@ -179,7 +179,7 @@ export default function Orders() {
               {order.status === "confirmed" && (
                 <div className="mx-5 mb-5 rounded-xl px-4 py-3 text-xs" style={{ background: "#E6F1FB", color: "#0C447C", border: "0.5px solid #B5D4F4" }}>
                   {order.paymentMethod === "mpesa" || order.paymentMethod === "bank_transfer"
-                    ? "Payment confirmed. Your order is now being processed."
+                    ? "Confirmed. Your order is now being processed."
                     : "Order confirmed. We will be in touch to arrange delivery or collection."}
                 </div>
               )}

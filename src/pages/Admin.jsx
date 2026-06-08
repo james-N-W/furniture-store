@@ -580,7 +580,7 @@ export default function Admin() {
         )}
       </div>
       <span className={`text-xs font-medium px-3 py-1 rounded-full flex-shrink-0 ${STATUS_STYLES[order.status] || "bg-gray-100 text-gray-600"}`}>
-        {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
+        {(order.status || "pending").charAt(0).toUpperCase() + (order.status || "pending").slice(1)}
       </span>
     </div>
 
@@ -597,14 +597,14 @@ export default function Admin() {
         <p className="text-xs text-gray-400 mb-1">Order ID</p>
         <p className="text-xs font-mono text-gray-600 truncate">{order.id}</p>
       </div>
-      <div>
+      {/*<div>
         <p className="text-xs text-gray-400 mb-1">M-Pesa code</p>
         <p className="text-sm font-mono text-gray-800">
           {order.mpesaCode || (
             <span className="text-gray-400 font-sans text-xs">Not received</span>
           )}
         </p>
-      </div>
+      </div>*/}
       <div>
         <p className="text-xs text-gray-400 mb-1">View image</p>
         {order.productImage ? (
